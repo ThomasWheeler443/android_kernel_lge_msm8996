@@ -105,6 +105,11 @@ static int con_scrolldelta(struct vc_data *vc, int x)
 	return 0;
 }
 
+// Fix for when DUMMY isnt defined
+#ifndef DUMMY
+#define DUMMY (void*)0
+#endif
+
 /*
  *  The console `switch' structure for the dummy console
  *
